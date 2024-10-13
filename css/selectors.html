@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* article p:first-of-type{
+            color:red;
+            font-size: 40px;
+        } */
+
+      /* 
+            simple selectors
+
+            * => universal selector
+            type or tag selector => tagname
+            . => class selector
+            # => id selector
+
+            attribute selector
+        */
+
+      /* *{
+            font-size: 40px;
+        } */
+
+      #red {
+        color: red;
+      }
+
+      [data-type="primary"] {
+        color: aqua;
+      }
+
+      /* href that contains image */
+      /* [href*='image']{
+        color: red;
+       } */
+      /* href that starts with  my
+         [href^='my']{
+        color: red;
+       } */
+
+      /* href that ends with  pdf*/
+      [href$="pdf"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selectors</h1>
+
+    <article>
+      <!-- <p class="red">This is para 1</p>
+        <p class="red">This is para 2</p> -->
+
+      <p id="red">This is para 1</p>
+      <p id="green">This is para 2</p>
+      <div data-type="primary">this is a div</div>
+    </article>
+
+    <br /><br /><br /><br />
+
+    <h2>Downloads</h2>
+
+    <ul>
+      <li>
+        <a href="my-image.jpg">An example image</a>
+      </li>
+      <li>
+        <a href="my-document.pdf">An example document</a>
+      </li>
+      <li>
+        <a href="my-document.pdf">Another example document</a>
+      </li>
+    </ul>
+
+    <br /><br /><br /><br />
+  </body>
+</html>
