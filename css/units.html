@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Units</title>
+    <style>
+      .one-rem {
+        font-size: 1rem;
+      }
+
+      .one-em {
+        font-size: 1em;
+      }
+
+      .thirty-two-px {
+        font-size: 32px;
+      }
+
+      .two-rem {
+        font-size: 2rem;
+      }
+
+      .two-em {
+        font-size: 2em;
+      }
+
+      .parent{
+        font-size: 32px;
+        border: 1px solid black;
+      }
+
+      .sixteen-px {
+        font-size: 16px;
+      }
+
+      html{
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Units</h1>
+
+    <!-- <p>THis is a para</p>
+    this is dummy text -->
+
+    <!-- 
+        absolute units
+
+        px - pixels => it is fixed and does not change based on any other element
+        => problematic for responsive sites
+        => use px when elements should not be resized
+
+
+        relative units
+
+        em: relative to its parent element
+        rem: relative to the root element (HTML Tag)
+        %: relative to the parent element
+        vw: relaive to viewport width
+        vh: relaive to viewport height
+
+        => better suited for responsive sites
+
+        by default 16px
+
+        1em = 16px 1*16
+        2em = 32px 2*16
+        0.5em = 8px .5*16
+
+        1rem = 16px 1*16
+        2rem = 32px 2*16
+        0.5rem = 8px .5*16
+
+        100% = 16px
+        200% = 32px
+        50% = 8px
+
+
+        default size = 14px
+
+
+        diff b/w em and rem
+
+        inheritance
+
+        every child element that uses rem will use root element as its calculation point
+        em relative to its parent
+
+    
+    -->
+
+    <p>16px</p>
+    <p class="one-rem">1 rem</p>
+    <p class="one-em">1 em</p>
+
+    <p class="thirty-two-px">32px</p>
+    <p class="two-rem">2 rem</p>
+    <p class="two-em">2 em</p>
+
+    <div class="parent">
+      <p class="sixteen-px">16px</p>
+      <p class="one-rem">1 rem</p>
+      <p class="one-em">1 em</p>
+    </div>
+  </body>
+</html>

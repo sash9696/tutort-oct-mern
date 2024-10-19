@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid black;
+        height: 40px;
+        margin: 20px 0;
+      }
+
+      .five-hundred-px {
+        width: 500px;
+      }
+      .fifty-percent {
+        width: 50%;
+      }
+      .fifty-vw {
+        width: 50vw;
+      }
+
+      .parent {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sizing</h1>
+
+    <!-- 
+        vw, % , pixels
+    -->
+    <!-- relative units
+
+    em: relative to its parent element
+    rem: relative to the root element (HTML Tag)
+    %: relative to the parent element
+    vw: relaive to viewport width
+    vh: relaive to viewport height -->
+
+    <div class="box five-hundred-px"></div>
+    <div class="box fifty-percent"></div>
+    <div class="box fifty-vw"></div>
+
+    <!-- parent => 600px -->
+    <div class="parent">
+      <div class="box five-hundred-px"></div>
+      <div class="box fifty-percent"></div>
+      <div class="box fifty-vw"></div>
+    </div>
+
+
+    <!-- 
+        column width: %
+        margins: px or % => usually % is preferable
+        padding: px, em or % =? em, %
+        font sizes: px , rem, em, vh
+
+        fr, rows in grids
+    
+
+    -->
+  </body>
+</html>

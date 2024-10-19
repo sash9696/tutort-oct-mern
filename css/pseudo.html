@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:hover{
+            color: red;
+        }
+
+        li:nth-child(even){
+            background-color: aqua;
+        }
+
+        h1::before{
+            content: 'Prefix-';
+        }
+
+        li::marker{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo classes and elements</h1>
+
+    <!-- 
+    >Pseudo classes => element state
+    start with :
+
+    Pseudo element => inserting a new element with css
+    start with ::
+
+    -->
+
+    <p>This is a para</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 1</li>
+        <li>item 1</li>
+        <li>item 1</li>
+
+    </ul>
+</body>
+</html>

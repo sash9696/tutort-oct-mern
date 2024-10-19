@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid black;
+        height: 40px;
+        /* margin: 20px 0; */
+        width: 400px;
+      }
+
+      /* div.relative{
+        position: relative;
+        left: 100px;
+      } */
+
+      div.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      div.absolute {
+        width: 200px;
+        height: 100px;
+        border: 2px solid black;
+        position: absolute;
+        right: 0;
+      }
+      div.relative {
+        width: 400px;
+        height: 200px;
+        border: 2px solid black;
+        position: relative;
+      }
+
+      div.sticky{
+        position: sticky;
+        bottom: 0;
+        padding: 5px;
+        border: 2px solid black;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        static => default position , not affected by top, bottom, left, right
+        relative => positioned relative to its normal position
+        fixed => is positioned relative to its viewport. it will always stay in the same position 
+        even if u r scrolling page
+        absolute => is positioned  to its nearest relative position
+        sticky=> is positioned based on scrolling behaviour (relative + fixed)
+    -->
+
+    <!-- <div class="box relative"></div> -->
+    <!-- <div class="box fixed"></div> -->
+    <p
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+      exercitationem harum error, officia, id inventore iure ratione quasi at
+      vero voluptatibus laborum nemo veritatis eum eligendi. Sed nihil debitis
+      assumenda!</p
+    >
+    <br>    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- <div class="relative">
+      <div class="absolute">this is an absolute position element</div>
+    </div>
+
+    <div style="height: 100vh"></div> -->
+
+    <br>    <br>
+    <br>
+    <br>
+    <br>
+    <div style="height: 200vh">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+        exercitationem harum error, officia, id inventore iure ratione quasi at
+        vero voluptatibus laborum nemo veritatis eum eligendi. Sed nihil debitis
+        assumenda!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+      exercitationem harum error, officia, id inventore iure ratione quasi at
+      vero voluptatibus laborum nemo veritatis eum eligendi. Sed nihil debitis
+      assumenda!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+      exercitationem harum error, officia, id inventore iure ratione quasi at
+      vero voluptatibus laborum nemo veritatis eum eligendi. Sed nihil debitis
+      assumenda!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+      exercitationem harum error, officia, id inventore iure ratione quasi at
+      vero voluptatibus laborum nemo veritatis eum eligendi. Sed nihil debitis
+      assumenda!
+
+    </div> 
+    <div class="sticky">This is a sticky position</div>
+
+  </body>
+</html>
