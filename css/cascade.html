@@ -13,10 +13,55 @@
         button{
             color: blue;
         }
+
+        .my-element{
+            color: red;
+        }
+        h1{
+            color: blue;
+        }
+
+
+        a{
+            color: red;
+            /* 1 point  */
+        }
+
+        a.my-class{
+            color: green;
+            /* 11 points */
+        }
+
+        a.my-class.another-class{
+            color: goldenrod;
+            /* 21 points  */
+        }
+
+        a.my-class.another-class[href]{
+            color: darkblue;
+            /* 31 points  */
+        }
+        
+        a.my-class.another-class[href]:hover{
+            color: darkblue;
+            /* 41 points  */
+
+            /* 
+            Selector Specificity: (0, 4, 1) 
+
+            #id - (.my-class , [class], :hover) - div , (::selection)
+
+                0-4-1
+            
+            
+            */
+        }
+        
     </style>
 </head>
 <body>
     
+    <a class="my-class another-class" href="#">A link</a>
 
 
 
@@ -30,9 +75,75 @@ position and order of appearance => the order of which ur css rules appear
 specificity=> an algorithm that determines which css selector has the strongest match
 origin=> order of css appears where it comes from, ex browser style, css from some extension, authored css
 importance=> !important, 
+
+
+
+
+position and order of appearance
+=> last one to be declared has more preference
+=> if u have two link tag, the bottom one will have more specificity
+    button{
+            color: red;
+        }
+        button{
+            color: blue;
+        }
+
+specificity
+=> each type of selector is given points to calculate how specific it is
+=> when u r combination selectors in that case the points of all selectors used are added together
+=> a.my-class.another-class[href]:hover
+
+Scores
+=> * has no specificity and gets 0 points
+=> this means that any rule with 1 or more points will overide it 
+*{
+    color:red
+}
+
+=> Element or psuedo element selector (1 point of specificity)
+div{
+    color:blue
+}
+
+::selection{
+    color:blue
+
+}
+
+=> class, pseudo-class or attribute selector (10 points of specificity)
+
+=> id selector (100 points of specificity)
+#myId{
+}
+
+=> inline style attribute (1000 points of specificity)
+<div style='color:red'></div>
+
+=> !important rule (10000 points of specificity)
+
+
+examples to calculate specificity score
+
+a[href='#']
+
+origin
+=>order of specificity of origins from least specific to most specific
+
+1. User agent based styles => browser applies to html elements by default
+2. Local user styles => they can from Operating system level, ex base fotn size, or from browser extensions
+3. Authored CSS => the css that we write
+4. Authored !important
+5. Local user styles !important
+6. User agent !important
+
 -->
-<button>
+<!-- <button>
     Sign in
-</button>
+</button> -->
+<h1 class="my-element">
+    Heading
+
+</h1>
 </body>
 </html>
