@@ -1,123 +1,70 @@
-// livescript
+//functions
 
-//js can be used in browser, it can also run on server
-//bascially it can rown on any device that has a special program JS Engine
+//building blocks of the program
 
-// v8 => in chrome, opera, edge
-//spidermonkey => firefox
-//chakra for IE, Squirrel fish for safari
+//function declaration
 
-// very basic idea of how these engine works
+// function displayMessage(){
+//     console.log('Hello world!');
+// };
 
-//the engine parses the script
-//then it compiles (converts) the script to machine code
-//then the machine gets executed
+// //call a function
+// displayMessage();
+// displayMessage();
+// displayMessage();
+// displayMessage();
 
-//Note engine applies optimizations at each step of the process
 
-//JS can do in browser
+//local variables => variable declared inside the function is only visible inside that fucntion
 
-// add new html , modify , manipulate existing content or Style
-// react to user events or interactions liek mouse clicks, pointer movements , key presses etc
-// send requests over the network  to remote severs
-// get and set cookies
-// persist the data in the inbuilt storages of browsers
 
-//JS cant do in browser
+// function displayMessage(){
+//     let message = 'Hello world!'
+//     console.log(message);
+// };
+// displayMessage();
 
-//js cannot read or write files on the hard disk, it does not have access to computers internal features like OS
-//user's explicit permissions are required to access some features like microphone , etc
-//diff tabs/windows does not know about each other
-//Same Origin Policy
-//any page from http://www.example.com is opened can access another browser tab with http://linkedin.com
+// console.log(message);
 
-// Variables
 
-//varable is a named storage
 
-//var , let , const
 
-// let message; //declaration
-// message = 'hello world'; //initialization
+//outer variables or global variables
+//a fucntion can access its outer variable
 
-// let num  = 10;
+// let username = 'John';
 
-// alert(num);
-// console.log(num)
+// function displayMessage(){
+//     // let message = `Greetings, ${username} `;
+//     let message = 'Greetings, ' + username;
 
-// let num  = 10, age=25, username='John';
+//     console.log(message);
+// };
+// displayMessage();
 
-// let num = 10;
-// console.log(num)
 
-// num = 'hello world';
+//global variables
+//variables declared outside of any function 
+//global variables are shawdowed by local variables
+//minimize the use of glbal variables
 
-// console.log(num)
 
-// var num = 10;
+//parameters and arguments
 
-// Variable naming
 
-//2 limitations
-// the name must contain only leters, digits or symbols like $ , _
-//the first char cannot be  a digit
+// function sum(a, b){ //parameters
+//     let total = a + b;
+//     return total;
+// };
 
-//camelCase
-//casing matters here .i.e variavles name and  NAME  aare different
+// let result = sum(10,20); //arguments
+// console.log(result);
 
-// "use strict";
-// num = 10;
 
-//Constants => unchanging values
+function sum(a, b = 0){ //parameters
+    let total = a + b;
+    return total;
+};
 
-// const birthdayDate = '22.02.2000';
-
-// birthdayDate=''
-
-//Uppercase constants
-
-// const COLOR_RED = "#F00";
-
-// Data types (8 basic types)
-
-//a value in js is always of a certain type
-
-// Number (both integer and floating point numbers)
-
-// let num = 10;
-// num = 10.3223;
-
-// // special numeric values
-
-// // Infinity, -Infinity, NaN
-
-// //exception NaN ** 0
-
-// // BigInt
-
-// // larger than (2^53 - 1) and less than -(2^53 - 1)
-
-// const bigInt = 84379832744792374237492374983749327498374293749832742398493243n;
-
-// String
-
-// let name = "john";
-// let Name = 'peter';
-
-// //`` are extended functionality
-
-// console.log(`the sum is ${10 + 30}`)
-
-// Boolean true false
-
-// let isNameFieldChecked = true;
-
-// //null value => special value that means nothing, empty or a value unknown
-
-// let age = null;
-
-//undefined value => special value , the value that is not assigned
-
-//objects and symbols
-
-var a;
+let result = sum(10); //arguments
+console.log(result);
