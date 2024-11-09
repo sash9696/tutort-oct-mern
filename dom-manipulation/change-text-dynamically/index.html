@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+
+    <div id="message">Click this button to change this text </div>
+    <button id="changeTextButton">Change Text</button>
+
+    <script>
+
+        const changeTextButton = document.getElementById('changeTextButton');
+        const messageDiv = document.getElementById('message');
+
+        //add an event listner
+
+        changeTextButton.addEventListener('click', function(){
+            messageDiv.textContent = `You clicked the button! the text has changed`;
+
+            //or
+            // messageDiv.innerText = `You clicked the button! the text has changed`;
+
+            //innerhtml is used to add elements 
+        })
+
+    </script>
+</body>
+</html>
