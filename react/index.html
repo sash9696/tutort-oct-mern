@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- react is one way binding -->
+    <script type="text/babel">
+      //jsx => javascript extension
+        function App() {
+          return (
+            <div> 
+                This is an app Component
+                <Greetings name="John" age={20} /> 
+                <Greetings name="Peter" age={30}/> 
+                <Greetings name="Dan" age={40}/> 
+                <Greetings name="Rock" age={50}/> 
+            </div>
+          );
+        };
+        function sum(a,b){
+            return a + b;
+        }
+        sum();
+
+        // function Greetings(props){
+        //     console.log('props',props)
+        //     return <h2>Hi My name is  {props.name} and I am {props.age} years old.</h2>
+        // }
+
+        function Greetings({name,age}){
+            return <h2>Hi My name is  {name} and I am {age} years old.</h2>
+        }
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+
+
+
+    //   REACT COMPONENT
+        //building block of react application
+        //reusable, self-contained piece of  UI and it returns UI representation
+
+
+    // JAVASCRIPT FUNCTION
+    //calculations, data manipulation, or any other tasks
+    //it does not have a UI, they simply execute code
+
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this page for starting a new React project with JSX:
+      https://react.dev/learn/start-a-new-react-project
+
+      Read this page for adding React with JSX to an existing project:
+      https://react.dev/learn/add-react-to-an-existing-project
+    -->
+  </body>
+</html>
